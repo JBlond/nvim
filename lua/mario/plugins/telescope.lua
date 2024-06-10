@@ -17,5 +17,6 @@ return {
 
     -- Was es sonst noch gibt
     -- https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#pickers
+    require('telescope').setup{ file_ignore_patterns = {"./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*"}, }
   end
 }

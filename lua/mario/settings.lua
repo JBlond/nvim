@@ -1,5 +1,8 @@
 vim.o.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor'
 
+-- make the left and right arrow keys change line
+vim.opt.whichwrap:append("<,>,h,l,[,]") 
+
 -- Zeilennummern
 vim.wo.number = true
 
