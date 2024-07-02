@@ -6,6 +6,9 @@ vim.opt.whichwrap:append("<,>,h,l,[,]")
 -- Zeilennummern
 vim.wo.number = true
 
+vim.opt.listchars = { tab = '»»' ,trail = '·' ,extends = '>', precedes = '<' ,eol = '↲' }
+vim.opt.list = true
+
 -- Leader Taste setzen
 -- Leader = Beliebter Präfix für eigene Tastenkürzel
 vim.g.mapleader = ' '
