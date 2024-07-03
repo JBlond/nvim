@@ -1,4 +1,5 @@
 # nvim
+
 My neovim / nvim config
 
 ```bash
