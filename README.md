@@ -8,6 +8,10 @@ git clone https://github.com/JBlond/nvim.git ~/.config/nvim
 # windows
 git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile%\AppData\Local\nvim\
 ```
+## shortcuts
+
+- `<space>w` fast save
+- `<space>q` fast save + quit / close
 
 ## nvim-tree
 
