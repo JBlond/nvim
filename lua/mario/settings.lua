@@ -1,22 +1,16 @@
-vim.o.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor'
+vim.o.background = 'dark' -- color schema
+vim.o.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor' --set cursor
 
--- make the left and right arrow keys change line
-vim.opt.whichwrap:append("<,>,h,l,[,]") 
-
--- line numbers
-vim.wo.number = true
-
+vim.wo.number = true -- line numbers
 vim.opt.listchars = { tab = '»»' ,trail = '·' ,extends = '>', precedes = '<' ,eol = '↲' }
 vim.opt.list = true
+vim.wo.wrap = false -- don't break lines
+vim.wo.linebreak = false -- don't break lines
 
--- don't break lines
-vim.wo.wrap = false
-vim.wo.linebreak = false
+vim.g.mapleader = ' ' -- Set Leader key SPACE
+vim.g.maplocalleader = ' ' -- Leader = My Prefix for custom key shortcuts
 
--- Set Leader key
--- Leader = My Prefix for custom key shortcuts
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.opt.whichwrap:append("<,>,h,l,[,]") -- make the left and right arrow keys change line
 
 -- key shortcut, to make :waq easier
 --
@@ -25,12 +19,8 @@ vim.g.maplocalleader = ' '
 -- Parameter 3: Other keys
 --              Colon wa Enter; colon q Enter
 vim.keymap.set("n", "<leader>q", ":wa<CR> :q<CR>")
-
--- fast save
-vim.keymap.set("n", "<leader>w", ":wa<CR>")
-
+vim.keymap.set("n", "<leader>w", ":wa<CR>") -- fast save
 -- :help vim.keymap.set
-
 
 -- Follow Help-Links via Enter
 vim.api.nvim_create_autocmd({"FileType"}, {
@@ -40,35 +30,21 @@ vim.api.nvim_create_autocmd({"FileType"}, {
   end
 })
 
-
 -- key shortcuts with Callback
 vim.keymap.set("n", "<leader>n", function ()
     vim.wo.number = not vim.wo.number
     vim.wo.relativenumber = not vim.wo.relativenumber
 end)
 
-
--- color schema
-vim.o.background = 'dark'
--- vim.o.background = 'light'
-
-vim.opt.termguicolors = true 
--- Enable GUI colors for the terminal to get truecolor
-
--- Einrückung mit 4 Spaces
+-- indent with 4 Spaces
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
+vim.o.smartindent = true -- resume indent
 
--- resume indent
-vim.o.smartindent = true
-
-
--- save Undo-Historie
-vim.opt.undofile = true
-
+vim.opt.undofile = true -- save Undo-Historie
 
 -- use System-Clipboard
 vim.o.clipboard = 'unnamedplus'
