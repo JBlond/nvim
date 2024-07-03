@@ -1,6 +1,13 @@
 # nvim
 My neovim / nvim config
 
+```bash
+# Linux
+git clone https://github.com/JBlond/nvim.git ~/.config/nvim
+# windows
+git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git C:\users\<name>\AppData\Local\nvim
+```
+
 ## nvim-tree
 
 - `<space>sf` Toggle nvim tree (sf = show files)
