@@ -13,7 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Plugin Dateien in ~/.config/nvim/lua/NAME/plugins legen
+-- Put Plugin files in ~/.config/nvim/lua/NAME/plugins
 require("lazy").setup({ 
     import = "mario.plugins",
 })
