@@ -9,6 +9,10 @@ vim.wo.number = true
 vim.opt.listchars = { tab = '»»' ,trail = '·' ,extends = '>', precedes = '<' ,eol = '↲' }
 vim.opt.list = true
 
+-- zeilen nicht umbrechen
+vim.wo.wrap = false
+vim.wo.linebreak = false
+
 -- Leader Taste setzen
 -- Leader = Beliebter Präfix für eigene Tastenkürzel
 vim.g.mapleader = ' '
