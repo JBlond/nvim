@@ -12,6 +12,7 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 - `<space>w` fast save
 - `<space>q` fast save + quit / close
+- `<ESC>` finisch search highlighting
 
 ## nvim-tree
 
