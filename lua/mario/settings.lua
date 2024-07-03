@@ -1,8 +1,21 @@
 vim.o.background = 'dark' -- color schema
 vim.o.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor' --set cursor
+vim.opt.cursorline = true -- Show which line your cursor is on
+vim.opt.inccommand = 'split' -- Preview substitutions live, as you type!
+
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+vim.opt.hlsearch = true
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.wo.number = true -- line numbers
-vim.opt.listchars = { tab = '»»' ,trail = '·' ,extends = '>', precedes = '<' ,eol = '↲' }
+vim.opt.listchars = { 
+    tab = '»»' ,
+    trail = '·' ,
+    extends = '>',
+    precedes = '<',
+    eol = '↲',
+    nbsp = '␣'
+}
 vim.opt.list = true
 vim.wo.wrap = false -- don't break lines
 vim.wo.linebreak = false -- don't break lines
