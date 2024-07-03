@@ -6,7 +6,7 @@ My neovim / nvim config
 # Linux
 git clone https://github.com/JBlond/nvim.git ~/.config/nvim
 # windows
-git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git C:\users\<name>\AppData\Local\nvim
+git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile%\AppData\Local\nvim\
 ```
 
 ## nvim-tree

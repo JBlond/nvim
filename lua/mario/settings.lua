@@ -46,9 +46,8 @@ vim.o.smartindent = true -- resume indent
 
 vim.opt.undofile = true -- save Undo-Historie
 
--- use System-Clipboard
-vim.o.clipboard = 'unnamedplus'
-
+vim.o.clipboard = 'unnamedplus' -- use System-Clipboard
+vim.opt.hidden = true -- allows you to hide buffers with unsaved changes without being prompted
 
 -- go to the last postion when re-open a file
 vim.api.nvim_command([[au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]])
