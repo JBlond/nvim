@@ -1,4 +1,5 @@
-vim.o.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor' --set cursor
+vim.opt.termguicolors = true
+vim.opt.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor' --set cursor
 vim.opt.cursorline = true                          -- Show which line your cursor is on
 vim.opt.inccommand = 'split'                       -- Preview substitutions live, as you type!
 
@@ -7,7 +8,7 @@ vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.wo.number = true                               -- line numbers
-vim.opt.listchars = { 
+vim.opt.listchars = {
     tab = '»»' ,
     trail = '·' ,
     extends = '>',
@@ -51,16 +52,16 @@ vim.keymap.set("n", "<leader>n", function ()
 end)
 
 -- indent with 4 Spaces
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
-vim.o.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 vim.o.smartindent = true -- resume indent
 
 vim.opt.undofile = true -- save Undo-Historie
 
-vim.o.clipboard = 'unnamedplus' -- use System-Clipboard
+vim.opt.clipboard = 'unnamedplus' -- use System-Clipboard
 vim.opt.hidden = true -- allows you to hide buffers with unsaved changes without being prompted
 
 -- go to the last postion when re-open a file
