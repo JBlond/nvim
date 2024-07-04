@@ -1,12 +1,10 @@
-vim.opt.termguicolors = true
-vim.opt.guicursor = 'n-v-c-sm-i-ci-ve:hor20,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor' --set cursor
+vim.opt.termguicolors = true                       -- use all colors
+vim.opt.guicursor = 'a:hor20'                      -- set the cursor
 vim.opt.cursorline = true                          -- Show which line your cursor is on
 vim.opt.inccommand = 'split'                       -- Preview substitutions live, as you type!
 
--- Set highlight on search, but clear on pressing <Esc> in normal mode
-vim.opt.hlsearch = true
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-
+vim.opt.hlsearch = true                            -- Set highlight on search, 
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')-- but clear on pressing <Esc> in normal mode
 vim.wo.number = true                               -- line numbers
 vim.opt.listchars = {
     tab = '»»' ,
