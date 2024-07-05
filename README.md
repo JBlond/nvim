@@ -20,14 +20,22 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - `<CTRL>n` next buffer
 - `<CTRL>p` previous buffer
 
-## nvim-tree
+## Plugins
+
+### nvim-tree
 
 - `<space>sf` Toggle nvim tree (sf = show files)
 - `<space>jf` Jumpt to file
 
-## Telescope
+### Telescope
 
 - `<space>he` Telescope help pages
 - `<space>ff` find files
 - `<space>fi` find inside the file
 - `<space>fg` find grep
+
+### Plugin Management
+
+```vim
+:Lazy
+```
