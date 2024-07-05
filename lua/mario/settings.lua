@@ -64,6 +64,11 @@ vim.opt.undofile = true                              -- save Undo-Historie
 vim.opt.clipboard = 'unnamedplus'                    -- use System-Clipboard
 vim.opt.hidden = true                                -- allows you to hide buffers with unsaved changes without being prompted
 
+vim.opt.smartcase = true                             -- use case sensitive if capital letter present or \C
+vim.opt.ignorecase = true                            -- ignore case in searches
+vim.opt.incsearch = true                             -- do incremental searching
+vim.opt.magic = true                                 -- Use 'magic' patterns (extended regular expressions).
+
 -- go to the last postion when re-open a file
 vim.api.nvim_command([[au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]])
 
