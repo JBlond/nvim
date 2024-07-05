@@ -15,7 +15,10 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 - `<space>w` fast save
 - `<space>q` fast save + quit / close
+- `<space>n` toggle relative line numbers
 - `<ESC>` finish search highlighting
+- `<CTRL>n` next buffer
+- `<CTRL>p` previous buffer
 
 ## nvim-tree
 
