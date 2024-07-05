@@ -30,4 +30,4 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - `<space>he` Telescope help pages
 - `<space>ff` find files
 - `<space>fi` find inside the file
-- `<space>fg` find prep
+- `<space>fg` find grep
