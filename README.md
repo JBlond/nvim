@@ -51,6 +51,14 @@ winget install --id "BurntSushi.ripgrep.GNU"
 winget install sharkdp.fd
 ```
 
+### Install all nerd fonts
+
+```powershell
+git clone --depth 1 --single-branch https://github.com/ryanoasis/nerd-fonts
+cd nerd-fonts
+./install.sh
+```
+
 ## Linux external programms
 
 ```
