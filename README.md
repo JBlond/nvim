@@ -9,6 +9,16 @@ git clone https://github.com/JBlond/nvim.git ~/.config/nvim
 git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile%\AppData\Local\nvim\
 ```
 
+## Windows neovim install
+
+```powershell
+winget install --id Microsoft.Powershell --source winget
+winget install --id "Neovim.Neovim"
+npm install -g neovim
+winget install python3
+winget install --id "BurntSushi.ripgrep.GNU"
+```
+
 ![preview](assets/001.jpg)
 
 ## shortcuts
