@@ -3,6 +3,7 @@ return {
   dependencies = {
      -- für schönere Icons
     'kyazdani42/nvim-web-devicons',
+	'echasnovski/mini.nvim'
   },
   config = function()
     require('nvim-tree').setup({
