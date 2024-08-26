@@ -49,6 +49,7 @@ npm install -g neovim
 winget install python3
 winget install --id "BurntSushi.ripgrep.GNU"
 winget install sharkdp.fd
+winget install "Lua for Windows"
 ```
 
 ### Install all nerd fonts
