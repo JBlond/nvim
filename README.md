@@ -50,6 +50,7 @@ winget install python3
 winget install --id "BurntSushi.ripgrep.GNU"
 winget install sharkdp.fd
 winget install "Lua for Windows"
+windet install DEVCOM.LuaJIT
 ```
 
 ### Install all nerd fonts
@@ -62,5 +63,19 @@ cd nerd-fonts
 
 ## Linux external programms
 
-```
+```bash
 sudo apt install fd-find ripgrep
+```
+
+## tmux
+
+When using neovim within tmux the cursor will change when exiting tmux. To prevent that add this to your tmux.conf
+
+```ini
+# always use 256 colors
+set -g default-terminal 'tmux-256color'
+# this is for 256 color
+set -ga terminal-overrides ',*:Tc'
+# this is for the cursor shape. 3 = blinking underscore. 1 would be a solid block
+set -ga terminal-overrides '*:Ss=\E[%p3%d q:Se=\E[ q'
+```
