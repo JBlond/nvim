@@ -1,11 +1,11 @@
 return {
     "hrsh7th/nvim-cmp",
     dependencies = {
-        -- Autocomplete Quellen
-        -- Siehe https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources
+        -- Autocomplete Sources                                                                                                           [40/341]
+        -- See https://github.com/hrsh7th/nvim-cmp/wiki/List-of-sources
         -- Buffer
         "hrsh7th/cmp-buffer",
-        -- Pfade
+        -- Path
         "hrsh7th/cmp-path",
         -- Language Server
         "hrsh7th/cmp-nvim-lsp",
@@ -13,7 +13,9 @@ return {
         "hrsh7th/cmp-cmdline",
         -- Snippet completion
         "hrsh7th/vim-vsnip",
-        "hrsh7th/cmp-vsnip"
+        "hrsh7th/cmp-vsnip",
+        -- function symbols
+        "crazyhulk/cmp-sign"
     },
     config = function()
         -- Set up nvim-cmp.
@@ -38,11 +40,13 @@ return {
                     }
                 ),
                 sources = cmp.config.sources(
+
                     {
                         {name = "nvim_lsp"},
                         {name = "vsnip"}, -- For vsnip users.
                         {name = "buffer"},
-                        {name = "path"}
+                        {name = "path"},
+                        {name = 'nvim_cmp_sign'}
                     }
                 )
             }
