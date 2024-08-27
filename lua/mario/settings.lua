@@ -41,21 +41,21 @@ vim.keymap.set("n", "<C-p>", ":bprevious<CR>")      -- move among buffers with C
 vim.keymap.set("n", "<C-n>", ":bnext<CR>")          -- move among buffers with CTRL + n (next)
                                                     -- :help vim.keymap.set
 vim.keymap.set("n", "<leader>n", function ()        -- key shortcuts with Callback
-  vim.wo.number = not vim.wo.number
-  vim.wo.relativenumber = not vim.wo.relativenumber
+    vim.wo.number = not vim.wo.number
+    vim.wo.relativenumber = not vim.wo.relativenumber
 end)
 
 vim.api.nvim_create_autocmd({"VimLeave"}, {         -- fix wrong cursor when leaving tmux
-  callback = function ()
-    vim.cmd('nvim_cursor_set_shape("horizontal-bar")')
-  end
+    callback = function ()
+        vim.cmd('nvim_cursor_set_shape("horizontal-bar")')
+    end
 })
 
 vim.api.nvim_create_autocmd({"FileType"}, {         -- Follow Help-Links via Enter
-  pattern = "help",
-  callback = function ()
-    vim.keymap.set("n", "<CR>", "<C-]>", {buffer = true})
-  end
+    pattern = "help",
+    callback = function ()
+        vim.keymap.set("n", "<CR>", "<C-]>", {buffer = true})
+    end
 })
 
 
