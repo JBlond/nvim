@@ -15,7 +15,9 @@ return {
         "hrsh7th/vim-vsnip",
         "hrsh7th/cmp-vsnip",
         -- function symbols
-        "crazyhulk/cmp-sign"
+        "crazyhulk/cmp-sign",
+		-- emojis
+		"hrsh7th/cmp-emoji"
     },
     config = function()
         -- Set up nvim-cmp.
@@ -46,7 +48,8 @@ return {
                         {name = "vsnip"}, -- For vsnip users.
                         {name = "buffer"},
                         {name = "path"},
-                        {name = 'nvim_cmp_sign'}
+                        {name = 'nvim_cmp_sign'},
+						{name = 'emoji', insert = true}
                     }
                 )
             }
