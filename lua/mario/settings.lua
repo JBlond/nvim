@@ -1,3 +1,9 @@
+-- Disable Language providers
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+
 vim.opt.termguicolors = true                       -- use all colors
 vim.opt.guicursor = 'a:hor20'                      -- set the cursor
 vim.opt.cursorline = true                          -- Show which line your cursor is on
