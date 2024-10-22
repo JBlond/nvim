@@ -40,7 +40,20 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 :Lazy
 ```
 
+## Linux install Neovim
+
+```bash
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+```
+
+add to path
+
+```bash
+export PATH="$PATH:/opt/nvim-linux64/bin"
 ## Windows neovim install
+```
 
 ```powershell
 winget install --id Microsoft.Powershell --source winget
