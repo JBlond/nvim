@@ -53,8 +53,9 @@ add to path
 
 ```bash
 export PATH="$PATH:/opt/nvim-linux64/bin"
-## Windows neovim install
 ```
+
+## Windows neovim install
 
 ```powershell
 winget install --id Microsoft.Powershell --source winget
