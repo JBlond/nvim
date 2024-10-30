@@ -5,10 +5,10 @@ return {
         -- normal
         vim.cmd("colorscheme onedark")
 
-        -- für light-mode
+        -- for light-mode
         -- vim.cmd("colorscheme onelight")
 
-        -- für mehr Kontrast
+        -- for more contrast
         -- vim.cmd("colorscheme onedark_dark")
     end
 }
