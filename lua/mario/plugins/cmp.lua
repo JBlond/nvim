@@ -49,7 +49,7 @@ return {
                         {name = "buffer"},
                         {name = "path"},
                         {name = 'nvim_cmp_sign'},
-						{name = 'emoji', insert = true}
+                        {name = 'emoji', insert = true}
                     }
                 )
             }
