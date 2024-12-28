@@ -40,7 +40,7 @@ return {
                     text = function(buffer) return (buffer.index ~= 1) and '▏' or '' end,
                 },
                 {
-                    text = '    ',
+                    text = ' ',
                 },
                 {
                     text = function(buffer)
@@ -54,7 +54,7 @@ return {
                     text = ' ',
                 },
                 {
-                    text = function(buffer) return buffer.filename .. '    ' end,
+                    text = function(buffer) return buffer.filename .. ' ' end,
                     bold = function(buffer)
                         return buffer.is_focused
                     end,
@@ -66,7 +66,7 @@ return {
                     end,
                 },
                 {
-                    text = '    ',
+                    text = ' ',
                 },
             },
         })
