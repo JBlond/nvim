@@ -6,11 +6,9 @@ return {
         -- Leader he für „help“ - oder was auch immer für dich Sinn ergibt.
         vim.keymap.set("n", "<leader>he", ":Telescope help_tags<CR>")
 
-        -- search inside files (fi - find)
-        vim.keymap.set("n", "<leader>fi", ":Telescope current_buffer_fuzzy_find<CR>")
+        -- search inside files
+        vim.keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>")
 
-        -- find files (ff)
-        vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
         -- find files like in sublime and VSCode
         vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>")
 

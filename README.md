@@ -18,7 +18,6 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - `<space>n` toggle relative line numbers
 - `<ESC>` finish search highlighting
 - `<CTRL>n` next buffer
-- `<CTRL>p` previous buffer
 
 ## Plugins
 
@@ -30,8 +29,8 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 ### Telescope
 
 - `<space>he` Telescope help pages
-- `<space>ff` find files
-- `<space>fi` find inside the file
+- `<CTRL>p` find files
+- `<CTRL>f` find inside the file
 - `<space>fg` find grep
 
 ### Plugin Management
