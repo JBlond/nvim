@@ -11,6 +11,8 @@ return {
 
         -- find files (ff)
         vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
+        -- find files like in sublime and VSCode
+        vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>")
 
         -- Grep (fg - find grep)
         vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
