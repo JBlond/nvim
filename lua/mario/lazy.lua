@@ -16,4 +16,15 @@ vim.opt.rtp:prepend(lazypath)
 -- Put Plugin files in ~/.config/nvim/lua/NAME/plugins
 require("lazy").setup({
     import = "mario.plugins",
+    change_detection = {
+        -- Do not automatically check for config file changes and reload the ui
+        enabled = false,
+    },
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                tutor",
+            }
+        }
+    }
 })
