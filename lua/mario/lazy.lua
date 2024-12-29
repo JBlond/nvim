@@ -23,7 +23,7 @@ require("lazy").setup({
     performance = {
         rtp = {
             disabled_plugins = {
-                tutor",
+                "tutor",
             }
         }
     }
