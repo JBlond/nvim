@@ -31,7 +31,7 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - `<space>he` Telescope help pages
 - `<CTRL>p` find files
 - `<CTRL>f` find inside the file
-- `<space>fg` find grep
+- `<ALT>f` find grep
 
 ### Plugin Management
 
