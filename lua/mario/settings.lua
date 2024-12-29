@@ -37,7 +37,7 @@ vim.opt.whichwrap:append("<,>,h,l,[,]")             -- make the left and right a
                                                     --              Colon wa Enter; colon q Enter
 vim.keymap.set("n", "<leader>q", ":wa<CR> :q<CR>")  -- fast save && quit
 vim.keymap.set("n", "<leader>w", ":wa<CR>")         -- fast save
--- vim.keymap.set("n", "<C-p>", ":bprevious<CR>")      -- move among buffers with CTRL + p (previous)
+vim.keymap.set("n", "<C-s>", ":wa<CR>")             -- fast save
 vim.keymap.set("n", "<C-n>", ":bnext<CR>")          -- move among buffers with CTRL + n (next)
                                                     -- :help vim.keymap.set
 vim.keymap.set("n", "<leader>n", function ()        -- key shortcuts with Callback
