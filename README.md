@@ -11,6 +11,10 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 ![preview](assets/001.jpg)
 
+### screenshots
+
+[screenhots](screenshots.md)
+
 ## shortcuts
 
 - `<space>w` fast save
