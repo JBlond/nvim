@@ -12,11 +12,9 @@ return {
         -- find files like in sublime and VSCode
         vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>")
 
-        -- Grep (fg - find grep)
-        vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
+        -- Grep (find grep)
+        vim.keymap.set("n", "<M-f>", ":Telescope live_grep<CR>")
 
-        -- What else?
-        -- https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#pickers
         require("telescope").setup {
             file_ignore_patterns = {".git/", "./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*"}
         }
