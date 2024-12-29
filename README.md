@@ -17,6 +17,7 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 ## shortcuts
 
+- `<CTRL>s` fast save
 - `<space>w` fast save
 - `<space>q` fast save + quit / close
 - `<space>n` toggle relative line numbers
