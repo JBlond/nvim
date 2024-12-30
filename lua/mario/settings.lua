@@ -59,12 +59,13 @@ vim.api.nvim_create_autocmd({"FileType"}, {         -- Follow Help-Links via Ent
 })
 
 vim.opt.signcolumn = yes
+vim.opt.conceallevel = 0                            -- show `` in markdown files
 
 -- indent with 4 Spaces
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.expandtab = true                             -- set to false to use space instead of tabs
 
 vim.opt.smartindent = true                           -- resume indent
 vim.opt.undofile = true                              -- save Undo-Historie
