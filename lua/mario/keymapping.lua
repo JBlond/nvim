@@ -26,3 +26,6 @@ vim.keymap.set("n", "<M-f>", ":Telescope live_grep<CR>") -- Grep (find grep)
 -- nvim-tree
 vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>") -- sf - show files
 vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz") -- jump (to) file, then center (zz)
+
+-- todo-comments
+vim.keymap.set("n", "<M-t>", ":TodoTelescope<CR>") -- toggle Todo
