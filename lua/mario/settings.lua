@@ -10,7 +10,7 @@ vim.opt.cursorline = true                          -- Show which line your curso
 vim.opt.inccommand = 'split'                       -- Preview substitutions live, as you type!
 
 vim.opt.hlsearch = true                            -- Set highlight on search,
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')-- but clear on pressing <Esc> in normal mode
+
 vim.wo.number = true                               -- line numbers
 vim.opt.listchars = {
     tab = '»»' ,
@@ -23,27 +23,7 @@ vim.opt.listchars = {
 vim.opt.list = true                                 -- show "hidden" list characters
 vim.wo.wrap = false                                 -- don't break lines
 vim.wo.linebreak = false                            -- don't break lines
-
-vim.g.mapleader = ' '                               -- Set Leader key SPACE
-vim.g.maplocalleader = ' '                          -- Leader = My Prefix for custom key shortcuts
-
 vim.opt.whichwrap:append("<,>,h,l,[,]")             -- make the left and right arrow keys change line
-
-                                                    -- key shortcut, to make :waq easier
-                                                    --
-                                                    -- Parameter 1: Mode (n = normal, i = insert…)
-                                                    -- Parameter 2: key shortcut (Leader, then w for „write“)
-                                                    -- Parameter 3: Other keys
-                                                    --              Colon wa Enter; colon q Enter
-vim.keymap.set("n", "<leader>q", ":wa<CR> :q<CR>")  -- fast save && quit
-vim.keymap.set("n", "<leader>w", ":wa<CR>")         -- fast save
-vim.keymap.set("n", "<C-s>", ":wa<CR>")             -- fast save
-vim.keymap.set("n", "<C-n>", ":bnext<CR>")          -- move among buffers with CTRL + n (next)
-                                                    -- :help vim.keymap.set
-vim.keymap.set("n", "<leader>n", function ()        -- key shortcuts with Callback
-    vim.wo.number = not vim.wo.number
-    vim.wo.relativenumber = not vim.wo.relativenumber
-end)
 
 vim.api.nvim_create_autocmd({"VimLeave"}, {         -- fix wrong cursor when leaving tmux
     callback = function ()
