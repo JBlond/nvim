@@ -58,6 +58,7 @@ vim.api.nvim_create_autocmd({"FileType"}, {         -- Follow Help-Links via Ent
     end
 })
 
+vim.opt.signcolumn = yes:3
 
 -- indent with 4 Spaces
 vim.opt.tabstop = 4
