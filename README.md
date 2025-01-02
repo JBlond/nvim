@@ -68,11 +68,12 @@ winget install --id Microsoft.Powershell --source winget
 winget install --id "Neovim.Neovim"
 npm install -g neovim
 winget install python3
-winget install --id "BurntSushi.ripgrep.GNU"
 winget install sharkdp.fd
 winget install "Lua for Windows"
 windet install DEVCOM.LuaJIT
 ```
+
+[RipGREP](https://github.com/BurntSushi/ripgrep/releases)
 
 ### Install all nerd fonts
 
