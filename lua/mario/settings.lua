@@ -11,7 +11,7 @@ vim.opt.inccommand = 'split'                       -- Preview substitutions live
 
 vim.opt.hlsearch = true                            -- Set highlight on search,
 
-vim.wo.number = true                               -- line numbers
+vim.wo.number = true                               -- Show line numbers
 vim.opt.listchars = {
     tab = '»»' ,
     trail = '·' ,
@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd({"FileType"}, {         -- Follow Help-Links via Ent
     end
 })
 
-vim.opt.signcolumn = yes
+vim.opt.signcolumn = yes                            -- show column before number for ToDo Plugin
 vim.opt.conceallevel = 0                            -- show `` in markdown files
 
 -- indent with 4 Spaces
