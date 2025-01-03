@@ -4,9 +4,7 @@
 My personal neovim configuration with 10 plugins & numerous keybinds written with lua using the lazy.nvim package manager.
 </p>
 
-
 ## <!-- Small trick for a github README seperator. -->
-
 
 ### Preview
 
@@ -14,14 +12,12 @@ My personal neovim configuration with 10 plugins & numerous keybinds written wit
 ![preview](assets/002.jpg)
 ![preview](assets/003.jpg)
 
-
 ### Requirements
 
 - **fd**: Better "find" command
 - **rg**: Better "grep" command
-- **tmux**: Terminal multiplexer
+- **tmux**: Terminal multiplexer (optional)
 - **nerd font**: Font patched with icons
-
 
 ### Instalation
 
@@ -41,7 +37,6 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 </details>
 
-
 ### Shortcuts
 
 - **\<esc>**: Clear search highlights
@@ -56,7 +51,6 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - **\<space>jf**: Jump to files
 - **\<space>sf**: Toggle file tree
 - **\<space>he**: Search help pages
-
 
 ### Extra
 
