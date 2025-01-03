@@ -45,7 +45,13 @@ vim.opt.conceallevel = 0                            -- show `` in markdown files
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true                             -- set to false to use space instead of tabs
+vim.opt.expandtab = true                             -- set to false to use tabs instead of space
+                                                     -- Setting 'expandtab' does not affect any existing tabs.
+                                                     -- convert tabs to spaces
+                                                     -- :set expandtab
+                                                     -- :%retab!
+                                                     -- space to tab :set noexpandtab
+                                                     -- :%retab!
 
 vim.opt.smartindent = true                           -- resume indent
 vim.opt.undofile = true                              -- save Undo-Historie
