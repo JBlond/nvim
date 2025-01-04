@@ -45,6 +45,7 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - **\<ctrl-n>**: Next buffer
 - **\<ctrl-p>**: Find files
 - **\<ctrl-f>**: Find file contents
+- **\<alt-t>**: Find TODO: in file contents
 - **\<space>w**: Write
 - **\<space>q**: Write & quit
 - **\<space>n**: Toggle relative line numbers
