@@ -29,3 +29,5 @@ vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz") -- jump (to) file, 
 
 -- todo-comments
 vim.keymap.set("n", "<M-t>", ":TodoTelescope<CR>") -- toggle Todo
+
+vim.keymap.set("n", "<C-k>", ":Screenkey toggle<CR>") -- toggle Screenkey

@@ -52,6 +52,7 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 - **\<space>jf**: Jump to files
 - **\<space>sf**: Toggle file tree
 - **\<space>he**: Search help pages
+- **\<ctrl-k>**: Toggle screen key feature
 
 ### Extra
 
