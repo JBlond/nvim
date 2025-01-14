@@ -6,6 +6,12 @@ My personal neovim configuration with 10 plugins & numerous keybinds written wit
 
 ## <!-- Small trick for a github README seperator. -->
 
+### 🎐 Features
+
+- **Simple.** Runs out of the box.
+- **Modern.** Pure `lua` config.
+- **Modular.** Easy to customize.
+
 ### Preview
 
 ![preview](assets/001.jpg)
@@ -19,7 +25,7 @@ My personal neovim configuration with 10 plugins & numerous keybinds written wit
 - **tmux**: Terminal multiplexer (optional)
 - **nerd font**: Font patched with icons
 
-### Instalation
+### 🏗 Instalation
 
 <details open><summary>Linux</summary>
 
@@ -66,3 +72,11 @@ set -ga terminal-overrides ',*:Tc'
 # This is for the cursor shape (3 = blinking underscore, 1 = solid block).
 set -ga terminal-overrides '*:Ss=\E[%p3%d q:Se=\E[ q'
 ```
+
+### License
+
+A short and simple permissive license with conditions only requiring preservation of 
+copyright and license notices. Licensed works, modifications, and larger works may be 
+distributed under different terms and without source code.
+
+For more see [MIT LICENSE](LICENSE)
