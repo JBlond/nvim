@@ -43,6 +43,10 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 </details>
 
+#### Install plugins
+
+Start neovim and run `:Lazy`
+
 ### Shortcuts
 
 - **\<esc>**: Clear search highlights
@@ -75,8 +79,8 @@ set -ga terminal-overrides '*:Ss=\E[%p3%d q:Se=\E[ q'
 
 ### License
 
-A short and simple permissive license with conditions only requiring preservation of 
-copyright and license notices. Licensed works, modifications, and larger works may be 
+A short and simple permissive license with conditions only requiring preservation of
+copyright and license notices. Licensed works, modifications, and larger works may be
 distributed under different terms and without source code.
 
 For more see [MIT LICENSE](LICENSE)
