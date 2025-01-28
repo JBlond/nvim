@@ -43,7 +43,7 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile
 
 </details>
 
-#### Install plugins
+#### Update plugins
 
 Start neovim and run `:Lazy`
 
