@@ -22,8 +22,8 @@ My personal neovim configuration with 10 plugins & numerous keybinds written wit
 
 - **fd**: Better "find" command
 - **rg**: Better "grep" command
-- **tmux**: Terminal multiplexer (optional)
 - **nerd font**: Font patched with icons
+- **tmux**: Terminal multiplexer (optional)
 
 ### 🏗 Instalation
 
