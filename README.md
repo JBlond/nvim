@@ -1,10 +1,10 @@
 <h3 align="center"> Nvim </h3>
 
 <p align="center">
-My personal neovim configuration with 10 plugins & numerous keybinds written with lua using the lazy.nvim package manager.
+My personal neovim configuration with 10 plugins & numerous keybindngs written with lua using the lazy.nvim package manager.
 </p>
 
-## <!-- Small trick for a github README seperator. -->
+## <!-- Small trick for a github README separator. -->
 
 ### 🎐 Features
 
@@ -25,7 +25,7 @@ My personal neovim configuration with 10 plugins & numerous keybinds written wit
 - **nerd font**: Font patched with icons
 - **tmux**: Terminal multiplexer (optional)
 
-### 🏗 Instalation
+### 🏗 Installation
 
 <details open><summary>Linux</summary>
 
