@@ -12,6 +12,17 @@ vim.opt.inccommand = 'split'                         -- Preview substitutions li
 
 vim.opt.hlsearch = true                              -- Set highlight on search,
 
+-- language and spell
+vim.opt.helplang = de
+vim.opt.spelllang = de_de,en_us
+vim.api.nvim_create_autocmd('FileType', {
+    group = vim.api.nvim_create_augroup('wrap_spell', { clear = true }),
+    pattern = { 'gitcommit', 'markdown', 'text' },
+    callback = function()
+        vim.opt_local.spell = true
+    end,
+})
+
 vim.wo.number = true                                 -- Show line numbers
 vim.opt.listchars = {
     tab = '»»' ,
