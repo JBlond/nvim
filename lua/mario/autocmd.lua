@@ -10,3 +10,9 @@ vim.api.nvim_create_autocmd({"FileType"}, {          -- Follow Help-Links via En
         vim.keymap.set("n", "<CR>", "<C-]>", {buffer = true})
     end
 })
+
+vim.api.nvim_create_autocmd("TextYankPost", {        -- Highlight yanked text
+    callback = function()
+        vim.highlight.on_yank({ higroup = "IncSearch", timeout = 500 })
+    end,
+})
