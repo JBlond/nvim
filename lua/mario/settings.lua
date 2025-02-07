@@ -6,6 +6,9 @@ vim.g.loaded_ruby_provider = 0
 
 vim.opt.termguicolors = true                         -- use all colors
 vim.opt.guicursor = 'a:hor20'                        -- set the cursor
+if vim.g.neovide then
+	vim.o.guifont = "LucidaConsole Nerd Font Mono:h16"
+end
 vim.opt.cursorline = true                            -- Show which line your cursor is on
 -- vim.opt.cursorcolumn = true                       -- highlight the current column
 vim.opt.inccommand = 'split'                         -- Preview substitutions live, as you type!
