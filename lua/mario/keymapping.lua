@@ -10,11 +10,13 @@ vim.keymap.set("n", "<leader>w", ":wa<CR>")         -- fast save
 vim.keymap.set("n", "<C-s>", ":wa<CR>")             -- fast save
 vim.keymap.set("n", "<C-n>", ":bnext<CR>")          -- move among buffers with CTRL + n (next)
                                                     -- :help vim.keymap.set
-                                                    --
-vim.keymap.set("n", "<leader>n", function ()        -- key shortcuts with Callback
-    vim.wo.number = not vim.wo.number
-    vim.wo.relativenumber = not vim.wo.relativenumber
-end)
+                                                    -- 
+vim.keymap.set("n", "<leader>n",                    -- key shortcuts with Callback
+    function()        
+        vim.wo.number = not vim.wo.number
+        vim.wo.relativenumber = not vim.wo.relativenumber
+    end
+)
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- but clear on pressing <Esc> in normal mode
 
 -- Telescope
