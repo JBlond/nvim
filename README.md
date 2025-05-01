@@ -37,8 +37,16 @@ git clone https://github.com/JBlond/nvim.git ~/.config/nvim
 
 <details open><summary>Windows</summary>
 
+cmd
+
 ```powershell
 git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git %userprofile%\AppData\Local\nvim\
+```
+
+powershell
+
+```powershell
+git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git $env:LOCALAPPDATA\nvim\
 ```
 
 </details>
