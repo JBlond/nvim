@@ -71,6 +71,7 @@ Start neovim and run `:Lazy`
 - **\<space>sf**: Toggle file tree
 - **\<space>he**: Search help pages
 - **\<ctrl-k>**: Toggle screen key feature
+- **\<space><space>** search within open buffers
 
 ### Extra
 
