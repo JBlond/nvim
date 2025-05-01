@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>n",                                                
         vim.wo.number = not vim.wo.number
         vim.wo.relativenumber = not vim.wo.relativenumber
     end,
-    , { desc = 'toogle relative [n]umbering' }
+    { desc = 'toogle relative [n]umbering' }
 )
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')                                           -- but clear on pressing <Esc> in normal mode
 
