@@ -25,7 +25,7 @@ vim.keymap.set("n", "<leader>he", ":Telescope help_tags<CR>", { desc = '[he]lp' 
 vim.keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", { desc = '[f]ind' }) -- search inside files
 vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>")                                     -- find files like in sublime and VSCode
 vim.keymap.set("n", "<M-f>", ":Telescope live_grep<CR>", { desc = 'grep [f]ind' })            -- Grep (find grep)
-vim.keymap.set('n', '<leader><leader>', ":Telescope buffers", { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader><leader>', ":Telescope buffers<CR>", { desc = '[ ] Find existing buffers' })
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>", { desc = '[s]how [f]iles'})          -- sf - show files
