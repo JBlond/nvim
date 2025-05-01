@@ -20,14 +20,14 @@ vim.keymap.set("n", "<leader>n",                    -- key shortcuts with Callba
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- but clear on pressing <Esc> in normal mode
 
 -- Telescope
-vim.keymap.set("n", "<leader>he", ":Telescope help_tags<CR>") -- Leader he für „help“
-vim.keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>") -- search inside files
+vim.keymap.set("n", "<leader>he", ":Telescope help_tags<CR>" , { desc = '[he]lp' }) -- Leader he für „help“
+vim.keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", { desc = '[f]find' }) -- search inside files
 vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>") -- find files like in sublime and VSCode
 vim.keymap.set("n", "<M-f>", ":Telescope live_grep<CR>") -- Grep (find grep)
 
 -- nvim-tree
-vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>") -- sf - show files
-vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz") -- jump (to) file, then center (zz)
+vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>", { desc = '[s]how [f]iles' }) -- sf - show files
+vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz", { desc = '[j]jump to [f]ile' }) -- jump (to) file, then center (zz)
 
 -- todo-comments
 vim.keymap.set("n", "<M-t>", ":TodoTelescope<CR>") -- toggle Todo
