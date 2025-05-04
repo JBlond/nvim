@@ -1,7 +1,7 @@
 <h3 align="center"> Nvim </h3>
 
 <p align="center">
-My personal neovim configuration with 10 plugins & numerous keybindngs written with lua using the lazy.nvim package manager.
+My personal neovim configuration with plugins & numerous keybindngs written with lua using the lazy.nvim package manager.
 </p>
 
 ## <!-- Small trick for a github README separator. -->
@@ -11,7 +11,7 @@ My personal neovim configuration with 10 plugins & numerous keybindngs written w
 - **Simple.** Runs out of the box.
 - **Modern.** Pure `lua` config.
 - **Modular.** Easy to customize.
-- **Slim.** No bloated config system 
+- **Slim** 
 
 ### Preview
 
@@ -72,7 +72,8 @@ Start neovim and run `:Lazy`
 - **\<space>sf**: Toggle file tree
 - **\<space>he**: Search help pages
 - **\<ctrl-k>**: Toggle screen key feature
-- **\<space><space>** search within open buffers
+- **\<space><space>**: search within open buffers
+- **\<space>m**: Enter Multi Line Edit
 
 ### Extra
 
