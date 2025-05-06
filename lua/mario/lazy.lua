@@ -20,6 +20,10 @@ require("lazy").setup({
         -- Do not automatically check for config file changes and reload the ui
         enabled = false,
     },
+    checker = {
+        enabled = true, -- check for plugin updates periodically
+        notify = true, -- notify on update
+    },
     performance = {
         rtp = {
             disabled_plugins = {
