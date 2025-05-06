@@ -28,6 +28,9 @@ require("lazy").setup({
         rtp = {
             disabled_plugins = {
                 "tutor",
+                "tarPlugin",
+                "tohtml",
+                "zipPlugin",
             }
         }
     }
