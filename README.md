@@ -74,6 +74,7 @@ Start neovim and run `:Lazy`
 - **\<ctrl-k>**: Toggle screen key feature
 - **\<space><space>**: search within open buffers
 - **\<space>m**: Enter Multi Line Edit
+- **\<space>r**: Toggle Render mode for markdown files
 
 ### Extra
 
