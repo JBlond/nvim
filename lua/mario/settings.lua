@@ -1,3 +1,5 @@
+vim.loader.enable()                                  -- gain some speed
+
 -- Disable Language providers
 vim.g.loaded_node_provider = 0
 vim.g.loaded_perl_provider = 0
@@ -60,5 +62,3 @@ vim.api.nvim_command([[au BufReadPost * if line("'\"") > 0 && line("'\"") <= lin
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
-vim.loader.enable()                                  -- gain some speed
