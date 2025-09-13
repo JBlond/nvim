@@ -11,7 +11,7 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 - **Simple.** Runs out of the box.
 - **Modern.** Pure `lua` config.
 - **Modular.** Easy to customize.
-- **Slim.** Small config files and Lazy loading when needed 
+- **Slim.** Small config files and Lazy loading when needed
 
 ### Preview
 
