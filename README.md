@@ -11,7 +11,7 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 - **Simple.** Runs out of the box.
 - **Modern.** Pure `lua` config.
 - **Modular.** Easy to customize.
-- **Slim** 
+- **Slim.** Small config files and Lazy loading when needed 
 
 ### Preview
 
@@ -24,7 +24,6 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 - **fd**: Better "find" command
 - **rg**: Better "grep" command
 - **nerd font**: Font patched with icons
-- **tmux**: Terminal multiplexer (optional)
 
 ### 🏗 Installation
 
