@@ -23,7 +23,7 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 
 - **fd**: Better "find" command
 - **rg**: Better "grep" command
-- **nerd font**: Font patched with icons
+- **nerd font**: Font patched with icons [install nerd fonts](install-nerdfonts.md)
 
 ### 🏗 Installation
 
@@ -32,6 +32,8 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 ```bash
 git clone https://github.com/JBlond/nvim.git ~/.config/nvim
 ```
+
+Also [install-nvim.sh](install-nvim.sh)
 
 </details>
 
@@ -48,6 +50,8 @@ powershell
 ```powershell
 git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git $env:LOCALAPPDATA\nvim\
 ```
+
+Also [install-scoop.ps1](install-scoop.ps1) and [install-nvim.cmd](install-nvim.cmd)
 
 </details>
 
