@@ -78,6 +78,8 @@ Start neovim and run `:Lazy`
 - **\<space><space>**: search within open buffers
 - **\<space>m**: Enter Multi Line Edit
 - **\<space>r**: Toggle Render mode for markdown files
+- **\<shift>j**: Fast down / 5 rows down 
+- **\<shift>k**: Fast up / 5 rows up
 
 ### Extra
 
