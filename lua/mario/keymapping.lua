@@ -20,6 +20,10 @@ vim.keymap.set("n", "<leader>n",                                                
 )
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')                             -- but clear on pressing <Esc> in normal mode
 
+-- Perusing code faster with K and J
+vim.keymap.set({ "n", "v" }, "K", "5k", { noremap = true, desc = "Up faster" })
+vim.keymap.set({ "n", "v" }, "J", "5j", { noremap = true, desc = "Down faster" })
+
 -- Telescope
 vim.keymap.set("n", "<leader>he", ":Telescope help_tags<CR>", { desc = '[he]lp' })            -- Leader he für „help“
 vim.keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", { desc = '[f]ind' }) -- search inside files
