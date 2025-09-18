@@ -11,7 +11,9 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 - **Simple.** Runs out of the box.
 - **Modern.** Pure `lua` config.
 - **Modular.** Easy to customize.
-- **Slim.** Small config files and Lazy loading of plugins only when needed
+- **Slim.** Small config files 
+- **Fast Loading** Lazy loading of plugins only when needed
+- **Cross-Platform** works on Linux, macOS and Window
 
 ### Preview
 
@@ -21,8 +23,8 @@ My personal neovim configuration with plugins & numerous keybindngs written with
 
 ### Requirements
 
-- **fd**: Better "find" command
-- **rg**: Better "grep" command
+- **fd**: Better "find" command [fd](https://github.com/sharkdp/fd) 
+- **rg**: Better "grep" command [ripgrep](https://github.com/BurntSushi/ripgrep) 
 - **nerd font**: Font patched with icons [install nerd fonts](install-nerdfonts.md)
 
 ### 🏗 Installation
