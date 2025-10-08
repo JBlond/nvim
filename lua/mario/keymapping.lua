@@ -9,6 +9,7 @@ vim.keymap.set("n", "<leader>q", ":wa<CR> :q<CR>", { desc = 'save and [q]uit'}) 
 vim.keymap.set("n", "<leader>w", ":wa<CR>", { desc = '[w]rite / save all'})     -- fast save
 vim.keymap.set("n", "<C-s>", ":wa<CR>", { desc = 'write / [s]ave all' })        -- fast save
 vim.keymap.set("n", "<C-n>", ":bnext<CR>", { desc = '[n]ext buffer' })          -- move among buffers with CTRL + n (next)
+vim.keymap.set("n", "<C-c>", "<cmd>%y+<CR>", { desc = "copy whole file" })      --
                                                                                 -- :help vim.keymap.set
                                                                                 -- 
 vim.keymap.set("n", "<leader>n",                                                -- key shortcuts with Callback
@@ -42,3 +43,4 @@ vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz", { desc = '[j]jump t
 vim.keymap.set("n", "<M-t>", ":TodoTelescope<CR>", { desc = 'toggle [t]odo'})                  -- toggle Todo
 
 vim.keymap.set("n", "<C-k>", ":Screenkey toggle<CR>" , { desc = 'toggle Scren [k]ey'})         -- toggle Screenkey
+

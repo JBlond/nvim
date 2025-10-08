@@ -69,6 +69,7 @@ Start neovim and run `:Lazy`
 - **\<ctrl-n>**: Next buffer
 - **\<ctrl-p>**: Find files
 - **\<ctrl-f>**: Find file contents
+- **\<ctrl-c>**: Copy the whole file
 - **\<alt-t>**: Find TODO: in file contents
 - **\<space>w**: Write
 - **\<space>q**: Write & quit
