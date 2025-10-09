@@ -59,7 +59,7 @@ Also [install-scoop.ps1](install-scoop.ps1) and [install-nvim.cmd](install-nvim.
 
 #### Update plugins
 
-Start neovim and run `:Lazy`
+Start neovim and run `:Lazy sync`
 
 ### Shortcuts
 
