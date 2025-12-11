@@ -81,6 +81,7 @@ Start neovim and run `:Lazy sync`
 - **\<space><space>**: search within open buffers
 - **\<space>m**: Enter Multi Line Edit
 - **\<space>r**: Toggle Render mode for markdown files
+- **\space>i**: Toggle indent lines highlighting
 - **\<shift>j**: Fast down / 5 rows down 
 - **\<shift>k**: Fast up / 5 rows up
 
