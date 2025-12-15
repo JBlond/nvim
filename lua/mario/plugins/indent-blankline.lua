@@ -1,5 +1,6 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
+    event = "BufReadPost",
     main = "ibl",
     config = function()
         local highlight = {
@@ -14,17 +15,17 @@ return {
 
         local hooks = require "ibl.hooks"
         hooks.register(
-			hooks.type.HIGHLIGHT_SETUP, function()
-				local colors = require("onedarkpro.helpers").get_colors()
-				vim.api.nvim_set_hl(0, "RainbowRed",        { fg = colors.red })
-				vim.api.nvim_set_hl(0, "RainbowYellow", { fg = colors.yellow })
-				vim.api.nvim_set_hl(0, "RainbowBlue",     { fg = colors.blue })
-				vim.api.nvim_set_hl(0, "RainbowOrange", { fg = colors.orange })
-				vim.api.nvim_set_hl(0, "RainbowGreen",    { fg = colors.green })
-				vim.api.nvim_set_hl(0, "RainbowViolet", { fg = colors.purple })
-				vim.api.nvim_set_hl(0, "RainbowCyan",     { fg = colors.cyan })
-			end
-		)
+            hooks.type.HIGHLIGHT_SETUP, function()
+                local colors = require("onedarkpro.helpers").get_colors()
+                vim.api.nvim_set_hl(0, "RainbowRed",        { fg = colors.red })
+                vim.api.nvim_set_hl(0, "RainbowYellow", { fg = colors.yellow })
+                vim.api.nvim_set_hl(0, "RainbowBlue",     { fg = colors.blue })
+                vim.api.nvim_set_hl(0, "RainbowOrange", { fg = colors.orange })
+                vim.api.nvim_set_hl(0, "RainbowGreen",    { fg = colors.green })
+                vim.api.nvim_set_hl(0, "RainbowViolet", { fg = colors.purple })
+                vim.api.nvim_set_hl(0, "RainbowCyan",     { fg = colors.cyan })
+            end
+        )
 
         require("ibl").setup {
             indent = { char = "│", highlight = highlight },
