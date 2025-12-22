@@ -86,8 +86,6 @@ Start neovim and run `:Lazy sync`
 - **\<shift>j**: Fast down / 5 rows down 
 - **\<shift>k**: Fast up / 5 rows up
 
-
-
 ### Extra
 
 When using neovim within tmux the cursor will change when exiting tmux. To prevent that add this to your "tmux.conf".
