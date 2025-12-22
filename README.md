@@ -77,6 +77,7 @@ Start neovim and run `:Lazy sync`
 - **\<space>jf**: Jump to files
 - **\<space>sf**: Toggle file tree
 - **\<space>he**: Search help pages
+- **\<space>e**: Toggle nvim-tree file explorer
 - **\<ctrl-k>**: Toggle screen key feature
 - **\<space><space>**: search within open buffers
 - **\<space>m**: Enter Multi Line Edit
@@ -84,6 +85,8 @@ Start neovim and run `:Lazy sync`
 - **\space>i**: Toggle indent lines highlighting
 - **\<shift>j**: Fast down / 5 rows down 
 - **\<shift>k**: Fast up / 5 rows up
+
+
 
 ### Extra
 
