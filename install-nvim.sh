@@ -4,15 +4,15 @@ ENDCOLOR="\e[0m"
 
 # Function to compare two versions
 version_gt() {
-  [ "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1" ]
+    printf '%s\n%s\n' "$1" "$2" | sort -V | tail -n 1 | grep -qx "$1"
 }
 
 # Get the installed nvim version (strip "NVIM" prefix and extract version)
-installed_version=$(nvim --version 2>/dev/null | head -n 1 | awk '{print $2}')
+installed_version=$(nvim --version 2>/dev/null | head -n 1 | awk '{print $2}' | sed 's/^v//')
 
 # Retrieve the latest version from Neovim releases
-latest_version=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest | \
-                   grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
+latest_version=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
+    | grep '"tag_name":' | sed -E 's/.*"v?([^"]+)".*/\1/')
 
 echo "Installed version: $installed_version"
 echo "Latest version: $latest_version"
@@ -24,13 +24,13 @@ if [ -z "$installed_version" ] || version_gt "$latest_version" "$installed_versi
   # Download and install the latest version
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
   if [ -f nvim-linux-x86_64.tar.gz ]; then
-      sudo rm -rf /opt/nvim-linux-x86_64
-      sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-      rm nvim-linux-x86_64.tar.gz
+    sudo rm -rf /opt/nvim-linux-x86_64
+    sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+    rm nvim-linux-x86_64.tar.gz
 
       # Only show PATH hint if /opt/nvim-linux-x86_64/bin is not already in PATH
-      if ! echo "$PATH" | /bin/grep -Eq '(^|:)/opt/nvim-linux-x86_64/bin($|:)'; then
-          echo -e "Added nvim to your path like ${RED}PATH=\"\$PATH:/opt/nvim-linux-x86_64/bin\"${ENDCOLOR}"
+      if ! echo "$PATH" | grep -Eq '(^|:)/opt/nvim-linux-x86_64/bin($|:)'; then
+        echo -e "Add nvim to your path like ${RED}PATH=\"\$PATH:/opt/nvim-linux-x86_64/bin\"${ENDCOLOR}"
       fi
 
       # Check for missing dependencies
