@@ -3,16 +3,17 @@ RED="\e[1;41m"
 ENDCOLOR="\e[0m"
 
 # Function to compare two versions
-version_gt() {
-    printf '%s\n%s\n' "$1" "$2" | sort -V | tail -n 1 | grep -qx "$1"
+
+rsion_gt() {
+  [ "$1" != "$2" ] && [ "$(printf '%s\n%s\n' "$1" "$2" | sort -V | tail -n 1)" = "$1" ]
 }
 
+
 # Get the installed nvim version (strip "NVIM" prefix and extract version)
-installed_version=$(nvim --version 2>/dev/null | head -n 1 | awk '{print $2}' | sed 's/^v//')
+installed_version=$(nvim --version 2>/dev/null | head -n 1 | sed -E 's/.*v?([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
 
 # Retrieve the latest version from Neovim releases
-latest_version=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest \
-    | grep '"tag_name":' | sed -E 's/.*"v?([^"]+)".*/\1/')
+latest_version=$(curl -s https://api.github.com/repos/neovim/neovim/releases/latest | grep '"tag_name":' | sed -E 's/.*"v?([^"]+)".*/\1/')
 
 echo "Installed version: $installed_version"
 echo "Latest version: $latest_version"
