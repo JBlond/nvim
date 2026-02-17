@@ -4,7 +4,7 @@ ENDCOLOR="\e[0m"
 
 # Function to compare two versions
 
-rsion_gt() {
+version_gt() {
   [ "$1" != "$2" ] && [ "$(printf '%s\n%s\n' "$1" "$2" | sort -V | tail -n 1)" = "$1" ]
 }
 
