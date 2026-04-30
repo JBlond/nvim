@@ -48,8 +48,39 @@ vim.opt.expandtab = true                             -- set to false to use tabs
 
 vim.opt.smartindent = true                           -- resume indent
 vim.opt.undofile = true                              -- save Undo-Historie
-vim.opt.clipboard = 'unnamedplus'                    -- use System-Clipboard
 vim.opt.hidden = true                                -- allows you to hide buffers with unsaved changes without being prompted
+
+function my_paste(reg)
+    return function(lines)
+
+        --[ Returns the contents of the "" register, used as paste for the p operator]
+        local content = vim.fn.getreg('"')
+        return vim.split(content, '\n')
+
+    end
+end
+
+if (os.getenv('SSH_TTY') == nil)
+then
+    --[The current environment is the local environment, which also includes WSL]
+    opt.clipboard:append("unnamedplus")  -- use System-Clipboard
+else
+    opt.clipboard:append("unnamedplus")  -- use System-Clipboard
+    vim.g.clipboard = {
+      name = 'OSC 52',
+      copy = {
+        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+      },
+      paste = {
+        --[The content inside the parentheses may be meaningless, but it might look better left as is.]
+        ["+"] = my_paste("+"),
+        ["*"] = my_paste("*"),
+
+
+    }
+}
+end
 
 vim.opt.smartcase = true                             -- use case sensitive if capital letter present or \C
 vim.opt.ignorecase = true                            -- ignore case in searches
