@@ -56,6 +56,16 @@ git clone -c core.autocrlf=false https://github.com/JBlond/nvim.git $env:LOCALAP
 
 Also [install-scoop.ps1](install-scoop.ps1) and [install-nvim.cmd](install-nvim.cmd)
 
+#### clipboard
+
+Maybe you also need to install a clipboard provider.
+
+See `:checkheatlh` if that is needed to do.
+
+```bash
+<pkg-manager> wl-clipboard
+```
+
 </details>
 
 #### Update plugins
