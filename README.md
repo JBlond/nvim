@@ -12,7 +12,7 @@ Batteries Included.
 - **Simple.** Runs out of the box.
 - **Modern.** Pure `lua` config.
 - **Modular.** Easy to customize.
-- **Slim.** Small config files 
+- **Slim.** Small config files
 - **Fast Loading** Lazy loading of plugins only when needed
 - **Cross-Platform** works on Linux, macOS and Window
 
@@ -24,8 +24,8 @@ Batteries Included.
 
 ### Requirements
 
-- **fd**: Better "find" command [fd](https://github.com/sharkdp/fd) 
-- **rg**: Better "grep" command [ripgrep](https://github.com/BurntSushi/ripgrep) 
+- **fd**: Better "find" command [fd](https://github.com/sharkdp/fd)
+- **rg**: Better "grep" command [ripgrep](https://github.com/BurntSushi/ripgrep)
 - **nerd font**: Font patched with icons [install nerd fonts](install-nerdfonts.md)
 
 ### 🏗 Installation
@@ -84,7 +84,7 @@ Start neovim and run `:Lazy sync`
 - **\<space>m**: Enter Multi Line Edit
 - **\<space>r**: Toggle Render mode for markdown files
 - **\space>i**: Toggle indent lines highlighting
-- **\<shift>j**: Fast down / 5 rows down 
+- **\<shift>j**: Fast down / 5 rows down
 - **\<shift>k**: Fast up / 5 rows up
 
 ### Extra
@@ -98,6 +98,14 @@ set -g default-terminal 'tmux-256color'
 set -ga terminal-overrides ',*:Tc'
 # This is for the cursor shape (3 = blinking underscore, 1 = solid block).
 set -ga terminal-overrides '*:Ss=\E[%p3%d q:Se=\E[ q'
+```
+
+## sudo
+
+To get it working with sudo you might have to add it to `/etc/sudoers` file.
+
+```ìni
+Defaults     secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/nvim-linux-x86_64/bin"
 ```
 
 ### License
