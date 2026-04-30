@@ -63,9 +63,9 @@ end
 if (os.getenv('SSH_TTY') == nil)
 then
     --[The current environment is the local environment, which also includes WSL]
-    opt.clipboard:append("unnamedplus")  -- use System-Clipboard
+    vim.opt.clipboard = 'unnamedplus'  -- use System-Clipboard
 else
-    opt.clipboard:append("unnamedplus")  -- use System-Clipboard
+    vim.opt.clipboard = 'unnamedplus'  -- use System-Clipboard
     vim.g.clipboard = {
       name = 'OSC 52',
       copy = {
@@ -78,7 +78,7 @@ else
         ["*"] = my_paste("*"),
 
 
-    }
+    },
 }
 end
 
