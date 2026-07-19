@@ -8,6 +8,22 @@ version_gt() {
   [ "$1" != "$2" ] && [ "$(printf '%s\n%s\n' "$1" "$2" | sort -V | tail -n 1)" = "$1" ]
 }
 
+# Welche Architektur (Raspberry Pi: aarch64)
+arch="$(uname -m)"
+case "$arch" in
+  x86_64|amd64)
+    nvim_pkg="nvim-linux-x86_64.tar.gz"
+    nvim_dir="nvim-linux-x86_64"
+    ;;
+  aarch64|arm64)
+    nvim_pkg="nvim-linux-arm64.tar.gz"
+    nvim_dir="nvim-linux-arm64"
+    ;;
+  *)
+    echo "Unbekannte Architektur: $arch"
+    exit 1
+    ;;
+esac
 
 # Get the installed nvim version (strip "NVIM" prefix and extract version)
 installed_version=$(nvim --version 2>/dev/null | head -n 1 | sed -E 's/.*v?([0-9]+\.[0-9]+\.[0-9]+).*/\1/')
@@ -23,15 +39,17 @@ if [ -z "$installed_version" ] || version_gt "$latest_version" "$installed_versi
   echo "Updating Neovim to version $latest_version..."
 
   # Download and install the latest version
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
-  if [ -f nvim-linux-x86_64.tar.gz ]; then
-    sudo rm -rf /opt/nvim-linux-x86_64
-    sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
-    rm nvim-linux-x86_64.tar.gz
+  url="https://github.com/neovim/neovim/releases/latest/download/${nvim_pkg}"
+  curl -LO "$url"
 
-      # Only show PATH hint if /opt/nvim-linux-x86_64/bin is not already in PATH
-      if ! echo "$PATH" | grep -Eq '(^|:)/opt/nvim-linux-x86_64/bin($|:)'; then
-        echo -e "Add nvim to your path like ${RED}PATH=\"\$PATH:/opt/nvim-linux-x86_64/bin\"${ENDCOLOR}"
+  if [ -f "$nvim_pkg" ]; then
+    sudo rm -rf "/opt/$nvim_dir"
+    sudo tar -C /opt -xzf "$nvim_pkg"
+    rm "$nvim_pkg"
+
+      # Only show PATH hint if /opt/<dir>/bin is not already in PATH
+      if ! echo "$PATH" | grep -Eq "(^|:)/opt/${nvim_dir}/bin($|:)"; then
+        echo -e "Add nvim to your path like ${RED}PATH=\"\$PATH:/opt/${nvim_dir}/bin\"${ENDCOLOR}"
       fi
 
       # Check for missing dependencies
