@@ -6,8 +6,10 @@ return {
         local themes = {
             "onedark",
             "onedark_dark",
-            "onelight",
             "vaporwave",
+            "kanagawa-wave",
+            "kanagawa-dragon",
+            "kanagawa-lotus"
         }
 
         vim.cmd.colorscheme(themes[1])
