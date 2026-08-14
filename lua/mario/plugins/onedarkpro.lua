@@ -9,7 +9,8 @@ return {
             "vaporwave",
             "kanagawa-wave",
             "kanagawa-dragon",
-            "kanagawa-lotus"
+            "kanagawa-lotus",
+            "monokai-pro"
         }
 
         vim.cmd.colorscheme(themes[1])
