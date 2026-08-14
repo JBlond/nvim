@@ -96,6 +96,7 @@ Start neovim and run `:Lazy sync`
 - **\space>i**: Toggle indent lines highlighting
 - **\<shift>j**: Fast down / 5 rows down
 - **\<shift>k**: Fast up / 5 rows up
+- **\<space>tc**: Theme change
 
 ### Extra
 
