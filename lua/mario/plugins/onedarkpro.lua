@@ -3,12 +3,23 @@ return {
     priority = 1000, -- Ensure it loads first
     config = function()
         vim.cmd.colorscheme("onedark")
-        vim.keymap.set("n", "<leader>tl", function()
-            if vim.g.colors_name == "onedark" then
-                vim.cmd.colorscheme("onedark_dark")
-            else
-                vim.cmd.colorscheme("onedark")
-            end
-        end, { desc = "Toggle light/dark colorscheme" })
+        local themes = {
+            "onedark",
+            "onedark_dark",
+            "onelight",
+            "vaporwave",
+        }
+
+        vim.cmd.colorscheme(themes[1])
+
+        vim.keymap.set("n", "<leader>tc", function()
+            vim.ui.select(themes, {
+                prompt = "Colorscheme:",
+            }, function(choice)
+                if choice then
+                    vim.cmd.colorscheme(choice)
+                end
+            end)
+        end, { desc = "Choose colorscheme" })
     end
 }
