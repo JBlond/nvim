@@ -98,6 +98,16 @@ Start neovim and run `:Lazy sync`
 - **\<shift>k**: Fast up / 5 rows up
 - **\<space>tc**: Theme change
 
+### themes
+
+- onedark (default)
+- onedark_dark
+- vaporwave
+- kanagawa-wave
+- kanagawa-dragon
+- kanagawa-lotus (light theme)
+- monokai-pro
+
 ### Extra
 
 When using neovim within tmux the cursor will change when exiting tmux. To prevent that add this to your "tmux.conf".
