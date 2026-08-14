@@ -6,6 +6,7 @@ return {
         vim.o.timeoutlen = 300
     end,
     opts = {
+        preset = "modern",
         icons   = { 
             mappings = false, 
             breadcrumb = "", 
