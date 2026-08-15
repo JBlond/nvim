@@ -6,39 +6,32 @@ return {
         local themes = {
             {
                 name = "onedark",
-                desc = "Classic OneDark theme",
-                style = "Dunkel",
+                desc = "Classic OneDark theme"
             },
             {
                 name = "onedark_dark",
-                desc = "Darker variant of OneDark",
-                style = "Sehr dunkel",
+                desc = "Darker variant of OneDark"
             },
             {
                 name = "vaporwave",
-                desc = "Colorful Synthwave / Vaporwave aesthetic",
-                style = "Dunkel · Neon",
-            },
-            {
-                name = "kanagawa-wave",
-                desc = "Dark, calm Kanagawa theme",
-                style = "Dunkel · Blue",
-            },
-            {
-                name = "kanagawa-dragon",
-                desc = "Dark Kanagawa with warm colors",
-                style = "Dark · Warm",
-            },
-            {
-                name = "kanagawa-lotus",
-                desc = "Light Kanagawa theme",
-                style = "Light",
+                desc = "Colorful Synthwave / Vaporwave aesthetic"
             },
             {
                 name = "monokai-pro",
-                desc = "Monokai Pro – high-contrast and colorful",
-                style = "Dark · Colorful",
+                desc = "Monokai Pro – high-contrast and colorful"
             },
+            {
+                name = "kanagawa-wave",
+                desc = "Dark, calm Kanagawa theme"
+            },
+            {
+                name = "kanagawa-dragon",
+                desc = "Dark Kanagawa with warm colors"
+            },
+            {
+                name = "kanagawa-lotus",
+                desc = "Light Kanagawa theme"
+            }
         }
 
         vim.cmd.colorscheme(themes[1].name)
@@ -56,8 +49,6 @@ return {
             local theme_applied = false
 
             local preview_code = {
-                "-- Neovim Theme Showcase",
-                "",
                 "local config = {",
                 '    editor = "Neovim",',
                 "    version = 0.10,",
@@ -130,7 +121,10 @@ return {
                     vim.bo[self.state.bufnr].bufhidden = "wipe"
                     vim.bo[self.state.bufnr].swapfile = false
 
-                    -- Cursor verstecken
+                    vim.wo[self.state.winid].number = true
+                    vim.wo[self.state.winid].relativenumber = false
+
+                    -- hide Cursor
                     vim.api.nvim_win_set_cursor(
                         self.state.winid,
                         { 1, 0 }
