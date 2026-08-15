@@ -6,35 +6,70 @@ return {
         local themes = {
             {
                 name = "onedark",
-                desc = "Classic OneDark theme"
+                desc = "Classic OneDark theme",
+                style = "Dark",
+                background = "dark",
             },
             {
                 name = "onedark_dark",
-                desc = "Darker variant of OneDark"
+                desc = "Darker variant of OneDark",
+                style = "Very dark",
+                background = "dark",
             },
             {
                 name = "vaporwave",
-                desc = "Colorful Synthwave / Vaporwave aesthetic"
+                desc = "Colorful Synthwave / Vaporwave aesthetic",
+                style = "Dark · Neon",
+                background = "dark",
             },
             {
                 name = "monokai-pro",
-                desc = "Monokai Pro – high-contrast and colorful"
+                desc = "Monokai Pro – high-contrast and colorful",
+                style = "Dark · Colorful",
+                background = "dark",
             },
             {
                 name = "kanagawa-wave",
-                desc = "Dark, calm Kanagawa theme"
+                desc = "Dark, calm Kanagawa theme",
+                style = "Dark · Blue",
+                background = "dark",
             },
             {
                 name = "kanagawa-dragon",
-                desc = "Dark Kanagawa with warm colors"
+                desc = "Dark Kanagawa with warm colors",
+                style = "Dark · Warm",
+                background = "dark",
             },
             {
                 name = "kanagawa-lotus",
-                desc = "Light Kanagawa theme"
-            }
+                desc = "Light Kanagawa theme",
+                style = "Light",
+                background = "light",
+            },
         }
 
-        vim.cmd.colorscheme(themes[1].name)
+        local function apply_theme(theme)
+            vim.o.background = theme.background or "dark"
+
+            if vim.g.colors_name == theme.name then
+                return true
+            end
+
+            local ok = pcall(vim.cmd.colorscheme, theme.name)
+
+            if not ok then
+                vim.notify(
+                    "Could not load colorscheme: " .. theme.name,
+                    vim.log.levels.ERROR
+                )
+                return false
+            end
+
+            return true
+        end
+
+        -- Initial theme
+        apply_theme(themes[1])
 
         vim.keymap.set("n", "<leader>tc", function()
             local pickers = require("telescope.pickers")
@@ -44,9 +79,12 @@ return {
             local action_state = require("telescope.actions.state")
             local previewers = require("telescope.previewers")
 
-            -- remember current theme
+            -- Remember the theme before opening the picker
             local original_theme = vim.g.colors_name
-            local theme_applied = false
+            local original_background = vim.o.background
+
+            -- Only set when the user explicitly presses Enter
+            local selected_theme = nil
 
             local preview_code = {
                 "local config = {",
@@ -95,18 +133,31 @@ return {
                 "return config",
             }
 
+            local function restore_theme()
+                if selected_theme ~= nil then
+                    return
+                end
+
+                if not original_theme then
+                    return
+                end
+
+                vim.schedule(function()
+                    vim.o.background = original_background
+                    pcall(vim.cmd.colorscheme, original_theme)
+                end)
+            end
+
             local previewer = previewers.new_buffer_previewer({
                 title = " Theme Preview ",
 
                 define_preview = function(self, entry)
                     local theme = entry.value
 
-                    -- Theme live anwenden
-                    if vim.g.colors_name ~= theme.name then
-                        vim.cmd.colorscheme(theme.name)
-                    end
+                    -- Live theme preview
+                    apply_theme(theme)
 
-                    -- Code in Preview schreiben
+                    -- Write code into preview buffer
                     vim.api.nvim_buf_set_lines(
                         self.state.bufnr,
                         0,
@@ -115,7 +166,7 @@ return {
                         preview_code
                     )
 
-                    -- Lua Syntax Highlighting
+                    -- Lua syntax highlighting
                     vim.bo[self.state.bufnr].filetype = "lua"
                     vim.bo[self.state.bufnr].buftype = "nofile"
                     vim.bo[self.state.bufnr].bufhidden = "wipe"
@@ -124,7 +175,7 @@ return {
                     vim.wo[self.state.winid].number = true
                     vim.wo[self.state.winid].relativenumber = false
 
-                    -- hide Cursor
+                    -- Hide cursor
                     vim.api.nvim_win_set_cursor(
                         self.state.winid,
                         { 1, 0 }
@@ -151,12 +202,17 @@ return {
                             value = entry,
 
                             display = string.format(
-                                "%-20s │ %s",
+                                "%-20s │ %-16s │ %s",
                                 entry.name,
+                                entry.style,
                                 entry.desc
                             ),
 
-                            ordinal = entry.name .. " " .. entry.desc,
+                            ordinal = table.concat({
+                                entry.name,
+                                entry.desc,
+                                entry.style,
+                            }, " "),
                         }
                     end,
                 }),
@@ -167,51 +223,43 @@ return {
 
                 attach_mappings = function(prompt_bufnr, map)
 
-                    -- Enter = Apply Theme
-                    map("i", "<CR>", function()
+                    local function apply_selection()
                         local selection =
                             action_state.get_selected_entry()
 
                         if selection then
-                            vim.cmd.colorscheme(
-                                selection.value.name
-                            )
+                            local theme = selection.value
 
-                            theme_applied = true
+                            if apply_theme(theme) then
+                                selected_theme = theme.name
+                            end
                         end
 
                         actions.close(prompt_bufnr)
-                    end)
+                    end
 
-                    -- Escape = restore theme
+                    -- Enter = Apply Theme
+                    map("i", "<CR>", apply_selection)
+                    map("n", "<CR>", apply_selection)
+
+                    -- Escape = Restore original theme
                     map("i", "<Esc>", function()
-                        if not theme_applied and original_theme then
-                            vim.cmd.colorscheme(original_theme)
-                        end
-
+                        restore_theme()
                         actions.close(prompt_bufnr)
                     end)
 
-                    -- Also in normal mode
                     map("n", "<Esc>", function()
-                        if not theme_applied and original_theme then
-                            vim.cmd.colorscheme(original_theme)
-                        end
-
+                        restore_theme()
                         actions.close(prompt_bufnr)
                     end)
 
-                    -- if Telescope is being closed another way
+                    -- Restore theme if Telescope is closed another way
                     vim.api.nvim_create_autocmd("BufWipeout", {
                         buffer = prompt_bufnr,
                         once = true,
 
                         callback = function()
-                            if not theme_applied and original_theme then
-                                vim.schedule(function()
-                                    vim.cmd.colorscheme(original_theme)
-                                end)
-                            end
+                            restore_theme()
                         end,
                     })
 
@@ -220,6 +268,8 @@ return {
             })
 
             picker:find()
-        end, { desc = "Choose colorscheme" })
+        end, {
+            desc = "Choose colorscheme",
+        })
     end,
 }
