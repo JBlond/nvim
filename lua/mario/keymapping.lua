@@ -11,9 +11,9 @@ vim.keymap.set("n", "<C-s>", ":wa<CR>", { desc = 'write / [s]ave all' })        
 vim.keymap.set("n", "<C-n>", ":bnext<CR>", { desc = '[n]ext buffer' })          -- move among buffers with CTRL + n (next)
 vim.keymap.set("n", "<C-c>", "<cmd>%y+<CR>", { desc = "copy whole file" })      --
                                                                                 -- :help vim.keymap.set
-                                                                                -- 
+                                                                                --
 vim.keymap.set("n", "<leader>n",                                                -- key shortcuts with Callback
-    function()        
+    function()
         vim.wo.number = not vim.wo.number
         vim.wo.relativenumber = not vim.wo.relativenumber
     end,
@@ -31,7 +31,7 @@ vim.keymap.set("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", { desc 
 vim.keymap.set("n", "<C-p>", ":Telescope find_files<CR>")                                     -- find files like in sublime and VSCode
 vim.keymap.set("n", "<M-f>", ":Telescope live_grep<CR>", { desc = 'grep [f]ind' })            -- Grep (find grep)
 vim.keymap.set('n', '<leader><leader>',                                                       -- Find in existing buffers
-    ":Telescope buffers<CR>", 
+    ":Telescope buffers<CR>",
     { desc = '[ ] Find existing buffers' }
 )
 
@@ -43,4 +43,8 @@ vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz", { desc = '[j]jump t
 vim.keymap.set("n", "<M-t>", ":TodoTelescope<CR>", { desc = 'toggle [t]odo'})                  -- toggle Todo
 
 vim.keymap.set("n", "<C-k>", ":Screenkey toggle<CR>" , { desc = 'toggle Scren [k]ey'})         -- toggle Screenkey
+
+-- neogit
+
+vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Neogit UI" })
 
