@@ -1,7 +1,7 @@
 <h3 align="center"> Nvim </h3>
 
 <p align="center">
-My personal neovim configuration with plugins & numerous keybindngsi<br>written with lua using the lazy.nvim package manager.<br>
+My personal neovim configuration with plugins & numerous keybindings<br>written with lua using the lazy.nvim package manager.<br>
 Batteries Included.
 </p>
 
