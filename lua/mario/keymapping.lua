@@ -45,6 +45,7 @@ vim.keymap.set("n", "<M-t>", ":TodoTelescope<CR>", { desc = 'toggle [t]odo'})   
 vim.keymap.set("n", "<C-k>", ":Screenkey toggle<CR>" , { desc = 'toggle Scren [k]ey'})         -- toggle Screenkey
 
 -- neogit
-
 vim.keymap.set("n", "<leader>gg", ":Neogit<CR>", { desc = "Open Neogit UI" })
 
+-- yank
+vim.keymap.set("n", "<leader>y", "<cmd>%yank<cr>", { desc = "yank entire buffer" })

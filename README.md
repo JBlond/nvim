@@ -98,6 +98,7 @@ Start neovim and run `:Lazy sync`
 - **\<shift>k**: Fast up / 5 rows up
 - **\<space>tc**: Theme change
 - **\<space>gg**: Open Neogit
+- **\<space>y**: yank/copy whole entire buffer/file
 
 ### themes
 
