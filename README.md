@@ -90,7 +90,7 @@ Start neovim and run `:Lazy sync`
 - **\<space>he**: Search help pages
 - **\<space>e**: Toggle nvim-tree file explorer
 - **\<ctrl-k>**: Toggle screen key feature
-- **\<space><space>**: search within open buffers
+- **\<space>\<space>**: search within open buffers
 - **\<space>m**: Enter Multi Line Edit
 - **\<space>r**: Toggle Render mode for markdown files
 - **\<space>i**: Toggle indent lines highlighting
