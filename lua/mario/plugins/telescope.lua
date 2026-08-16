@@ -1,7 +1,7 @@
 return {
     "nvim-telescope/telescope.nvim",
     cmd = "Telescope",
-    tag = "0.2.2",
+    tag = "v0.2.1",
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope.nvim"
