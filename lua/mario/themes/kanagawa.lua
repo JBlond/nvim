@@ -1,4 +1,9 @@
 return {
     "rebelot/kanagawa.nvim",
-    lazy = true
+    lazy = true,
+    config = function()
+    require("lualine").setup {
+        compile = true,
+    }
+    end
 }
