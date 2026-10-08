@@ -3,7 +3,7 @@ return {
     ft = { "markdown" }, -- load only in Markdown files
     event = "VeryLazy",
     dependencies = {
-        'nvim-treesitter/nvim-treesitter',
+        -- 'nvim-treesitter/nvim-treesitter',
         'nvim-mini/mini.nvim'
     },
     config = function()
