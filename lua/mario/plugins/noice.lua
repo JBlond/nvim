@@ -3,7 +3,8 @@ return {
     event = "VeryLazy",
     dependencies = {
         "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify"
+        "rcarriga/nvim-notify",
+        lazy = true,
     },
     opts = {
         enabled = true,

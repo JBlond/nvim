@@ -1,7 +1,10 @@
 return {
     "folke/todo-comments.nvim",
     event = "BufReadPost",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        lazy = true,
+    },
     opts = {
         highlight = {
             comments_only = false,

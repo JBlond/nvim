@@ -4,7 +4,8 @@ return {
     event = "BufReadPost",
     dependencies = {
         'nvim-treesitter/nvim-treesitter',
-        'nvim-mini/mini.nvim'
+        'nvim-mini/mini.nvim',
+        lazy = true,
     },
     config = function()
         local render = require('render-markdown')

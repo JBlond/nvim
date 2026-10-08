@@ -4,7 +4,8 @@ return {
     dependencies = {
         -- nice Icons
         "kyazdani42/nvim-web-devicons",
-        "echasnovski/mini.nvim"
+        "echasnovski/mini.nvim",
+        lazy = true,
     },
     config = function()
         require("nvim-tree").setup(
