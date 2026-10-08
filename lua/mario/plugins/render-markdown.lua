@@ -11,6 +11,9 @@ return {
         local render = require('render-markdown')
         render.setup({
             render_modes = { 'n', 'c', 't' },
+            html = { enabled = false },
+            latex = { enabled = false },
+            yaml = { enabled = false },
         })
 
         local enabled = true
