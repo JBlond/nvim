@@ -1,6 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    event = "VeryLazy",
+    ft = "markdown",
+    event = "BufReadPost",
     opts = {
         ensure_installed = {
             "bash",
