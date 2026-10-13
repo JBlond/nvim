@@ -35,6 +35,8 @@ vim.keymap.set('n', '<leader><leader>',                                         
     { desc = '[ ] Find existing buffers' }
 )
 
+vim.keymap.set("n", "<leader>ls", ":Lazy sync<CR>", { desc = '[lazys]ync' })
+
 -- nvim-tree
 vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>", { desc = '[s]how [f]iles'})          -- sf - show files
 vim.keymap.set("n", "<leader>jf", ":NvimTreeFindFile<CR>zz", { desc = '[j]jump to [f]ile'})   -- jump (to) file, then center (zz)

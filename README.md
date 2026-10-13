@@ -70,7 +70,7 @@ See `:checkheatlh` if that is needed to do.
 
 #### Update plugins
 
-Start neovim and run `:Lazy sync`
+Start neovim and run `:Lazy sync` or **\<space>ls**
 
 ### Shortcuts
 
@@ -99,6 +99,7 @@ Start neovim and run `:Lazy sync`
 - **\<space>tc**: Theme change
 - **\<space>gg**: Open Neogit
 - **\<space>y**: yank/copy whole entire buffer/file
+- **\<space>ls**: Lazy sync
 
 ### themes
 
