@@ -35,7 +35,7 @@ vim.keymap.set('n', '<leader><leader>',                                         
     { desc = '[ ] Find existing buffers' }
 )
 
-vim.keymap.set("n", "<leader>ls", ":Lazy sync<CR>", { desc = '[lazys]ync' })
+vim.keymap.set("n", "<leader>ls", ":Lazy sync<CR>", { desc = '[L]azy [s]ync' })
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>", { desc = '[s]how [f]iles'})          -- sf - show files
