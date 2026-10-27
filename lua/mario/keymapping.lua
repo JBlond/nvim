@@ -36,6 +36,7 @@ vim.keymap.set('n', '<leader><leader>',                                         
 )
 
 vim.keymap.set("n", "<leader>ls", ":Lazy sync<CR>", { desc = '[L]azy [s]ync' })
+vim.keymap.set("n", "<leader>ly", ":Lazy<CR>", { desc = '[L]az[y]' })
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>sf", ":NvimTreeToggle<CR>", { desc = '[s]how [f]iles'})          -- sf - show files

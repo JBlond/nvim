@@ -100,6 +100,7 @@ Start neovim and run `:Lazy sync` or **\<space>ls**
 - **\<space>gg**: Open Neogit
 - **\<space>y**: yank/copy whole entire buffer/file
 - **\<space>ls**: Lazy sync
+- **\<space>ly**: Lazy
 
 ### themes
 
